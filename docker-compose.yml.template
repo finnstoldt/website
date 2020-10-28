@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  proxy:
+    image: caddy:alpine
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./config/Caddyfile:/etc/caddy/Caddyfile
+      - ./data/caddy:/data
+    environment:
+      - LETSENCRYPT_EMAIL=
+      - APP_URL=
+      - PROXY_FRONTEND_URL=http://frontend
+      - PROXY_BACKEND_URL=http://backend
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+  backend:
+    build: ./backend
+    ports:
+      - 4000:4000
