@@ -1,13 +1,18 @@
 import styled from 'styled-components';
+import { BusinessCard } from './components/BusinessCard';
 
 const AppWrapper = styled.div`
-  background-color: red;
+  width: 100%;
+  height: auto;
+  font-family: 'Open Sans';
 `;
 
 function App() {
   return (
     <div className="App">
-      <AppWrapper></AppWrapper>
+      <AppWrapper>
+        <BusinessCard></BusinessCard>
+      </AppWrapper>
     </div>
   );
 }
