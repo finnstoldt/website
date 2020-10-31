@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import ReactCardFlip from 'react-card-flip';
-import React, { useState } from 'react';
+import styled from "styled-components";
+import ReactCardFlip from "react-card-flip";
+import React, { useState } from "react";
+import { Logo } from "./Logo";
+import { ContactInfo } from "./ContactInfo";
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,7 +45,12 @@ const FrontSideLogo = styled.div`
 `;
 
 const BackSide = styled(CardSide)`
-  background-color: grey;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /*align-items: flex-start;
+  justify-content: flex-start;*/
+  padding: 20px;
 `;
 
 const CardFlipped = styled.div`
@@ -54,6 +61,15 @@ const CardFlipped = styled.div`
   }
 `;
 
+// Why isn't this working?
+const CardLogo = styled(Logo)`
+  display: none;
+`;
+
+const CardContactInfo = styled(ContactInfo)`
+  display: none;
+`;
+
 function Card() {
   const [flipped, setFlipped] = useState(false);
   return (
@@ -62,7 +78,10 @@ function Card() {
         <FrontSide onClick={() => setFlipped(!flipped)}>
           <FrontSideLogo>FS</FrontSideLogo>
         </FrontSide>
-        <BackSide></BackSide>
+        <BackSide>
+          <CardLogo></CardLogo>
+          <CardContactInfo></CardContactInfo>
+        </BackSide>
       </ReactCardFlip>
     </CardFlipped>
   );
