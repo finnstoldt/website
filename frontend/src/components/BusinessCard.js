@@ -46,6 +46,9 @@ const FrontSideLogo = styled.div`
   font-size: 50px;
   line-height: 50px;
   transition: 300ms;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -2px;
 `;
 
 const BackSide = styled(CardSide)`
