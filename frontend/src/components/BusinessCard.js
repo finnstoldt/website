@@ -27,6 +27,10 @@ const FrontSide = styled(CardSide)`
   position: relative;
   transition: 300ms;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 const FrontSideLogo = styled.div`
@@ -50,15 +54,15 @@ const BackSide = styled(CardSide)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px 50px 50px 30px;
 `;
 
 const CardFlipped = styled.div`
   transition: 300ms;
 
-  & ${FrontSide}:hover {
+  /*& ${FrontSide}:hover {
     transform: scale(1.03);
-  }
+  }*/
 `;
 
 const CardLogo = styled(Logo)`

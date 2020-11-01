@@ -23,7 +23,7 @@ const Icon = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin-right: 10px;
+  margin-right: 13px;
   margin-left: 1px;
 `;
 
