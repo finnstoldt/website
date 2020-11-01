@@ -31,9 +31,9 @@ const Text = styled.div`
   color: #000;
 `;
 
-function ContactInfo() {
+function ContactInfo({ className }) {
   return (
-    <div>
+    <div className={className}>
       <Link href="mailto:kontakt@finnstoldt.de">
         <Icon url={envelope}></Icon>
         <Text>kontakt@finnstoldt.de</Text>

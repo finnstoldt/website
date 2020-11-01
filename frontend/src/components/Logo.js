@@ -23,9 +23,9 @@ const SubTitle = styled.div`
   color: #aaa;
 `;
 
-function Logo() {
+function Logo({ className }) {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Title>Finn Stoldt</Title>
       <SubTitle>IT-Dienstleistungen</SubTitle>
     </Wrapper>
