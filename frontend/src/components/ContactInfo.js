@@ -1,5 +1,7 @@
-import styled from "styled-components";
-import envelope from "../images/envelope.icon.png";
+import styled from 'styled-components';
+import envelope from '../images/envelope.icon.png';
+import phone from '../images/phone.icon.png';
+import { config } from '../config';
 
 const Link = styled.a`
   display: flex;
@@ -17,28 +19,38 @@ const Icon = styled.div`
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url(${(props) => props.url});
+  background-image: url(${({ url }) => url});
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin-right: 7px;
+  margin-right: 10px;
   margin-left: 1px;
 `;
 
 const Text = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   color: #000;
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
 function ContactInfo({ className }) {
   return (
-    <div className={className}>
-      <Link href="mailto:kontakt@finnstoldt.de">
+    <Wrapper className={className}>
+      <Link href={'mailto:' + config.email}>
         <Icon url={envelope}></Icon>
-        <Text>kontakt@finnstoldt.de</Text>
+        <Text>{config.email}</Text>
       </Link>
-    </div>
+      <Link href={'tel:' + config.phone}>
+        <Icon url={phone}></Icon>
+        <Text>{config.phone}</Text>
+      </Link>
+    </Wrapper>
   );
 }
 

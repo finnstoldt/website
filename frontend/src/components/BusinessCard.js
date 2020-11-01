@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import ReactCardFlip from "react-card-flip";
-import React, { useState } from "react";
-import { Logo } from "./Logo";
-import { ContactInfo } from "./ContactInfo";
+import styled from 'styled-components';
+import ReactCardFlip from 'react-card-flip';
+import React, { useState } from 'react';
+import { Logo } from './Logo';
+import { ContactInfo } from './ContactInfo';
 
 const Wrapper = styled.div`
   display: flex;
@@ -56,7 +56,7 @@ const BackSide = styled(CardSide)`
 const CardFlipped = styled.div`
   transition: 300ms;
 
-  &:hover {
+  & ${FrontSide}:hover {
     transform: scale(1.03);
   }
 `;
