@@ -48,9 +48,9 @@ const BackSide = styled(CardSide)`
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  /*align-items: flex-start;
-  justify-content: flex-start;*/
-  padding: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px;
 `;
 
 const CardFlipped = styled.div`
@@ -61,13 +61,12 @@ const CardFlipped = styled.div`
   }
 `;
 
-// Why isn't this working?
 const CardLogo = styled(Logo)`
-  display: none;
+  font-size: 40px;
 `;
 
 const CardContactInfo = styled(ContactInfo)`
-  display: none;
+  align-self: flex-end;
 `;
 
 function Card() {
