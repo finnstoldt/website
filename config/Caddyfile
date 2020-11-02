@@ -4,7 +4,7 @@
   log
   header -Server
 
-  handle_path /play/* {
+  handle_path /api/* {
     reverse_proxy {$PROXY_BACKEND_URL}
   }
 
