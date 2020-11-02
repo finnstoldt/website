@@ -4,13 +4,6 @@ import React, { useState } from 'react';
 import { Logo } from './Logo';
 import { ContactInfo } from './ContactInfo';
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
-
 const CardSide = styled.div`
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
   display: block;
@@ -76,7 +69,7 @@ const CardContactInfo = styled(ContactInfo)`
   align-self: flex-end;
 `;
 
-function Card() {
+function BusinessCard() {
   const [flipped, setFlipped] = useState(false);
   return (
     <CardFlipped>
@@ -90,14 +83,6 @@ function Card() {
         </BackSide>
       </ReactCardFlip>
     </CardFlipped>
-  );
-}
-
-function BusinessCard() {
-  return (
-    <Wrapper>
-      <Card></Card>
-    </Wrapper>
   );
 }
 

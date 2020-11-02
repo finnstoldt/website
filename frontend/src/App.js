@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { BusinessCard } from './components/BusinessCard';
+import { Route } from 'wouter';
+import { Front } from './pages/Front';
+import { Imprint } from './pages/Imprint';
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -9,11 +11,14 @@ const AppWrapper = styled.div`
 
 function App() {
   return (
-    <div className="App">
-      <AppWrapper>
-        <BusinessCard></BusinessCard>
-      </AppWrapper>
-    </div>
+    <AppWrapper className="App">
+      <Route path="/">
+        <Front />
+      </Route>
+      <Route path="/impressum">
+        <Imprint />
+      </Route>
+    </AppWrapper>
   );
 }
 
