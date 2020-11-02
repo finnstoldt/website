@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { config } from '../config';
 
 const Wrapper = styled.div`
   font-size: 40px;
@@ -26,7 +27,7 @@ const SubTitle = styled.div`
 function Logo({ className }) {
   return (
     <Wrapper className={className}>
-      <Title>Finn Stoldt</Title>
+      <Title>{config.contact.name}</Title>
       <SubTitle>IT-Dienstleistungen</SubTitle>
     </Wrapper>
   );

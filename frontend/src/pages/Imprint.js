@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { config } from '../config';
 
 const ImprintWrapper = styled.div`
   padding: 50px;
@@ -14,16 +15,16 @@ export function Imprint() {
     <ImprintWrapper>
       <h1>Impressum</h1>
       <h2>Angaben gemäß § 5 TMG:</h2>
-      <p>Finn Stoldt</p>
+      <p>{config.contact.name}</p>
       <h3>Postanschrift:</h3>
       <p>
-        Moislinger Allee 90A
-        <br /> 23558 Lübeck
+        {config.contact.street}
+        <br /> {config.contact.zip} {config.contact.city}
       </p>
       <h3>Kontakt:</h3>
       <p>
-        Telefon: +49 451 16081585 <br />
-        E-Mail: kontakt@finnstoldt.de
+        Telefon: {config.contact.phone} <br />
+        E-Mail: {config.contact.email}
       </p>
     </ImprintWrapper>
   );
