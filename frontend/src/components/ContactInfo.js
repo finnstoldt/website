@@ -42,13 +42,13 @@ const Wrapper = styled.div`
 function ContactInfo({ className }) {
   return (
     <Wrapper className={className}>
-      <Link href={'mailto:' + config.email}>
+      <Link href={'mailto:' + config.contact.email}>
         <Icon url={envelope}></Icon>
-        <Text>{config.email}</Text>
+        <Text>{config.contact.email}</Text>
       </Link>
-      <Link href={'tel:' + config.phone}>
+      <Link href={'tel:' + config.contact.phone}>
         <Icon url={phone}></Icon>
-        <Text>{config.phone}</Text>
+        <Text>{config.contact.phone}</Text>
       </Link>
     </Wrapper>
   );
