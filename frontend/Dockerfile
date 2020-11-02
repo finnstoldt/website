@@ -7,6 +7,7 @@ RUN yarn
 
 ADD src ./src
 ADD public ./public
+COPY .env .env
 RUN yarn build
 
 FROM caddy:alpine
