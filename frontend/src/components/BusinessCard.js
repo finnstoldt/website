@@ -10,6 +10,14 @@ const CardSide = styled.div`
   width: 500px;
   height: 324px;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 250px;
+  }
 `;
 
 const FrontSide = styled(CardSide)`
@@ -51,6 +59,10 @@ const BackSide = styled(CardSide)`
   align-items: flex-start;
   justify-content: space-between;
   padding: 30px 50px 50px 30px;
+
+  @media screen and (max-width: 500px) {
+    padding: 30px 30px 30px 30px;
+  }
 `;
 
 const CardFlipped = styled.div`
@@ -63,6 +75,14 @@ const CardFlipped = styled.div`
 
 const CardLogo = styled(Logo)`
   font-size: 40px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 30px;
+  }
 `;
 
 const CardContactInfo = styled(ContactInfo)`
