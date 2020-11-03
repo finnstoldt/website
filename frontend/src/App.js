@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Route } from 'wouter';
 import { Front } from './pages/Front';
 import { Imprint } from './pages/Imprint';
+import { Static } from './pages/Static';
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -17,6 +18,9 @@ function App() {
       </Route>
       <Route path="/impressum">
         <Imprint />
+      </Route>
+      <Route path="/static">
+        <Static />
       </Route>
     </AppWrapper>
   );
