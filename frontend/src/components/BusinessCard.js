@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ReactCardFlip from 'react-card-flip';
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { BusinessCardContext } from '../contexts/BusinessCardContext';
 import { Logo } from './Logo';
 import { ContactInfo } from './ContactInfo';
 
@@ -90,11 +91,11 @@ const CardContactInfo = styled(ContactInfo)`
 `;
 
 function BusinessCard() {
-  const [flipped, setFlipped] = useState(false);
+  const [context, setContext] = useContext(BusinessCardContext);
   return (
     <CardFlipped>
-      <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
-        <FrontSide onClick={() => setFlipped(!flipped)}>
+      <ReactCardFlip isFlipped={context.flipped} flipDirection="horizontal">
+        <FrontSide onClick={() => setContext({ flipped: !context.flipped })}>
           <FrontSideLogo>FS</FrontSideLogo>
         </FrontSide>
         <BackSide>
